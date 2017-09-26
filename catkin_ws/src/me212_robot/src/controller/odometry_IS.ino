@@ -43,9 +43,9 @@ void loop() {
   //////////////////////////////////////////////////////////////////
   // write your code
 
-  // theta += (1/(WIDTH))*(dis_R-dis_L);
-  // x += (1/2)*(cos(theta)*dis_R+cos(theta)*dis_L);
-  // y += (1/2)*(sin(theta)*dis_R+sin(theta)*dis_L);
+  theta += (1/(WIDTH))*(dis_R-dis_L);
+  x += 0.5*(cos(theta)*dis_R+cos(theta)*dis_L);
+  y += 0.5*(sin(theta)*dis_R+sin(theta)*dis_L);
 
   ///////////////////////////////////////////////////////////////////
   msg.data_length = 3;
