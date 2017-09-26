@@ -39,7 +39,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   dis_L = dis_per_tick * (encoder_pre_L - encoder_pos_L);
-  dis_R = dis_per_tick * (encoder_pre_R - encoder_pos_R);
+  dis_R = (-1) * dis_per_tick * (encoder_pre_R - encoder_pos_R);
   //////////////////////////////////////////////////////////////////
   // write your code
 
