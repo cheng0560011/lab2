@@ -29,7 +29,15 @@ class Tracking:
 		# stages: 1) straight line,
 		#         2) semi-circle
 		#         3) straight line again.
-
+		
+		if x>1 :
+			self.right_pwm = self.left_pwm*((0.25+0.1175)/(0.25-0.1175));
+			self.setSpeed(self.right_pwm);
+		else :
+			self.right_pwm = 60;
+			self.left_pwm = 60;
+			self.setSpeed(self.right_pwm);
+			self.setSpeed(self.left_pwm);
 
 
 	def custom_shutdown(self):
