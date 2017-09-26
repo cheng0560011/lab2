@@ -31,13 +31,13 @@ class Tracking:
 		#         3) straight line again.
 		
 		if x>1 :
-			self.right_pwm = self.left_pwm*((0.25+0.1175)/(0.25-0.1175));
-			self.setSpeed(self.right_pwm);
+			self.right_pwm = self.left_pwm*((0.25+0.1175)/(0.25-0.1175))
+			self.rightMotor.setSpeed(self.right_pwm)
 		else :
-			self.right_pwm = 60;
-			self.left_pwm = 60;
-			self.setSpeed(self.right_pwm);
-			self.setSpeed(self.left_pwm);
+			self.right_pwm = 60
+			self.left_pwm = 60
+			self.rightMotor.setSpeed(self.right_pwm)
+			self.leftMotor.setSpeed(self.left_pwm)
 
 
 	def custom_shutdown(self):
